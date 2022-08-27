@@ -1,0 +1,15 @@
+{
+  "files.exclude": {
+    "terraform.tfstate.backup": true,
+    "terraform.tfstate": true,
+    "**/*.tfstate": true,
+    ".terraform.lock.hcl": true,
+    ".gitignore": true,
+    ".terraform": true,
+    ".github": true,
+    ".vscode": true,
+    ".vscode/settings.json": true,
+    "**/.vscode": true,
+    "**/.vscode.*": true
+  }
+}

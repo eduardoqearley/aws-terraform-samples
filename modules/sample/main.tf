@@ -1,7 +1,3 @@
-terraform {
-  required_version = ">= 0.12.5"
-}
-
 data "aws_ami" "ubuntu" {
   most_recent = true
 
@@ -18,11 +14,11 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"] # Canonical
 }
 
-resource "aws_instance" "ubuntu" {
+resource "aws_instance" "web" {
   ami           = data.aws_ami.ubuntu.id
-  instance_type = var.instance_type
+  instance_type = "t3.micro"
 
   tags = {
-    Name = var.instance_name
+    Name = "HelloWorld"
   }
 }
