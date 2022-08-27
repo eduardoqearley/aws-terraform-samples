@@ -1,8 +1,7 @@
 output "instance_ami" {
-  value = aws_instance.ubuntu.ami
+  value = module.sample.aws_instance.ubuntu.ami
 }
 
 output "instance_arn" {
-  value = aws_instance.ubuntu.arn
+  value = module.sample.aws_instance.ubuntu.arn
 }
-
