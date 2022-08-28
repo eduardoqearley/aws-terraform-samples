@@ -12,7 +12,7 @@ module "iam" {
 
 ###BASTION
 module "bastion" {
-  source = "../modules/bastion"
+  source = "./modules/bastion"
   key_name = "demo"
   ami = "ami-0959f8e18a2aac0fb"
   subnet_id = "subnet-032eb52f974061033"
