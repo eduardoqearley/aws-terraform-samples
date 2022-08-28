@@ -49,6 +49,21 @@ variable "eks_cluster_version" {
   default     = "1.15"
 }
 
+variable "bastion_ami" {
+  description = "AMI for bastion host"
+  default = "ami-0873b46c45c11058d"
+}
+
+variable "bastion_env" {
+  description = "?"
+  default = "bastion-env"
+}
+
+variable "bastion_key_name" {
+  description = "?"
+  default = "bastion-key-name"
+  
+}
 variable "map_accounts" {
   description = "Additional AWS account numbers to add to the aws-auth configmap."
   type        = list

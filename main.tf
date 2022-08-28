@@ -8,11 +8,11 @@ module "iam" {
 ###BASTION
 module "bastion" {
   source = "./modules/bastion"
-  key_name = "demo"
-  ami = "ami-0873b46c45c11058d"
-  subnet_id = "subnet-032eb52f974061033"
+  key_name = var.bastion_key_name
+  ami = var.bastion_ami
+  subnet_id = var.public_subnets[0]
   vpc_id = module.vpc.vpc_id
-  environment = "prod-demo"
+  environment = var.bastion_env
   availability_zone = var.availability_zones[0]
   project = var.project
 }
