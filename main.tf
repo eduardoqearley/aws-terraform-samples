@@ -9,6 +9,20 @@ module "iam" {
 }
 
 ### END IAM
+
+###BASTION
+module "bastion" {
+  source = "../modules/bastion"
+  key_name = "demo"
+  ami = "ami-0959f8e18a2aac0fb"
+  subnet_id = "subnet-032eb52f974061033"
+  vpc_id = module.vpc.vpc_id
+  environment = "prod-demo"
+}
+
+### END BASTION
+
+
 ### END SAMPLE
 
 data "aws_caller_identity" "self" {}

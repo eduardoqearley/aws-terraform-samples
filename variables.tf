@@ -59,6 +59,9 @@ variable "map_accounts" {
   ]
 }
 
+variable "bastion_ami" {
+  default = "ami-08be3c327cd286962"  
+}
 variable "map_roles" {
   description = "Additional IAM roles to add to the aws-auth configmap."
   type = list(object({
@@ -85,11 +88,6 @@ variable "map_users" {
   }))
 
   default = [
-    {
-      userarn  = "arn:aws:iam::051187635610:user/josiah.denny"
-      username = "josiah.denny"
-      groups   = ["system:masters"]
-    },
     {
       userarn  = "arn:aws:iam::051187635610:user/edward.earley"
       username = "edward.earley"
