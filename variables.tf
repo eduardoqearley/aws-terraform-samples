@@ -19,17 +19,10 @@ variable "project" {
   type        = string
   default     = "eks-prod"
 }
-
-variable "region" {
-  description = "The region"
-  type        = string
-  default     = "us-east-1"
-}
-
 variable "availability_zones" {
   description = "The availability zones to use"
   type        = list
-  default     = ["us-east-1a", "us-east-1b", "us-east-1c"]
+  default     = ["us-west-2a", "us-west-2b", "us-west-2c"]
 }
 
 variable "main_cidr" {
