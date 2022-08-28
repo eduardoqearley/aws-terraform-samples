@@ -5,20 +5,6 @@ module "iam" {
 
 ### END IAM
 
-###BASTION
-module "bastion" {
-  source = "./modules/bastion"
-  key_name = var.bastion_key_name
-  ami = var.bastion_ami
-  subnet_id = var.public_subnets[0]
-  vpc_id = module.vpc.vpc_id
-  environment = var.bastion_env
-  availability_zone = var.availability_zones[0]
-  project = var.project
-}
-
-### END BASTION
-
 ### VPC
 resource "aws_eip" "nat" {
   count = length(var.availability_zones)
@@ -71,3 +57,17 @@ module "vpc" {
   }
 }
 ### VPC END
+
+###BASTION
+module "bastion" {
+  source = "./modules/bastion"
+  key_name = var.bastion_key_name
+  ami = var.bastion_ami
+  subnet_id = var.public_subnets[0]
+  vpc_id = module.vpc.vpc_id
+  environment = var.bastion_env
+  availability_zone = var.availability_zones[0]
+  project = var.project
+}
+
+### END BASTION
