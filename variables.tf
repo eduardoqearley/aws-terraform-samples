@@ -73,10 +73,6 @@ variable "map_accounts" {
     "888888888888",
   ]
 }
-
-variable "bastion_ami" {
-  default = "ami-08be3c327cd286962"  
-}
 variable "map_roles" {
   description = "Additional IAM roles to add to the aws-auth configmap."
   type = list(object({
