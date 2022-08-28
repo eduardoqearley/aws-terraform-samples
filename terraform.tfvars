@@ -1,0 +1,7 @@
+public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC1W4J0oDOgT/mN+ocBG9brLNkobANQhf3odczhzNj4IUJjfDVx8qsOSkfaWfyssSyb/XStL/7mNzIz18Hdnyfzlhd9UuLt5c8d2Z0mVijBA3XDX/G/wf+Fm7+vDGaCxd4lUwlMX7Kew+soWanUvK3enOQpqsNoGmGl/JEcyvnbPvoPKOH4vsnSI5MjjUvJfQD99jRmPI0P3f85c2p1dGUaA8MSGChsiVdLsjM2OnYo73iVXm59/7HzTgH2RKurSIyCpbBYehq13ylEm/MwxOshvQL3hxVpyeSw3Shs1EBLxr5FyJocqPlMGV+Qn1V/6TzQGOHPC/wBNM0vK0OY9iZGMmEH9QbSTIus+eWwS+bW5+Ckz/GMzGrKToAIn5db0fcSNDez2YO5NiVYeWr929TpcPtcINsILOPK5Qy00mWBqfcJZLxoZ/qp5ePI+qfJ/uTPRh/zNxkMp2Ng2PiECdAz/c3cvYLMWNXTGtWIv/ZS76227sFaV2eIN/WwgOZNuNk6fNZxXrbs8zBeeqcCDGh/kTJyFrA04p81jL1o6ElIF+lcY4STv/z5ShQ9ijVIBI0HbfRVFJb0Ndh9RlTFY0misEcpRC310v11MC++/TPDZ2zNkfcyUrT2kHFng2ZbfDEYCuhRFe3zuAWTxrEBr+Mq3X2YCW4iicCWm10WLiWebw== edward.earley@gmail.com"
+
+acme_domain_name = "k8s.eqe.io"
+
+## The default is letsencrypt-staging. Uncomment the line below to go "live".
+## See the README for more information.
+acme_cert_issuer = "letsencrypt-production"
