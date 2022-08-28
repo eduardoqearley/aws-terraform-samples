@@ -24,12 +24,6 @@ module "bastion" {
 
 ### END BASTION
 
-
-### END SAMPLE
-
-data "aws_caller_identity" "self" {}
-
-
 ### VPC
 resource "aws_eip" "nat" {
   count = length(var.availability_zones)
