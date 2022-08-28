@@ -68,6 +68,9 @@ module "bastion" {
   environment = var.bastion_env
   availability_zone = var.availability_zones[0]
   project = var.project
+  depends_on = [
+    module.vpc
+  ]
 }
 
 ### END BASTION
