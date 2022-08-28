@@ -9,7 +9,7 @@ module "iam" {
 module "bastion" {
   source = "./modules/bastion"
   key_name = "demo"
-  ami = "ami-0959f8e18a2aac0fb"
+  ami = "ami-0873b46c45c11058d"
   subnet_id = "subnet-032eb52f974061033"
   vpc_id = module.vpc.vpc_id
   environment = "prod-demo"
