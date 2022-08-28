@@ -14,7 +14,7 @@ resource "aws_iam_group_membership" "eks-admins" {
   name = "eks-admins"
 
   users = [
-    "${aws_iam_user.edward-earley.name}"
+    "${aws_iam_user.edward-earley.name}",
     "${aws_iam_user.eks.name}",
   ]
   group = aws_iam_group.eks-admins.name
