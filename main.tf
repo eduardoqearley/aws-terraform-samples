@@ -18,6 +18,8 @@ module "bastion" {
   subnet_id = "subnet-032eb52f974061033"
   vpc_id = module.vpc.vpc_id
   environment = "prod-demo"
+  availability_zone = var.availability_zones[0]
+  project = var.project
 }
 
 ### END BASTION

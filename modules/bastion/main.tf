@@ -1,4 +1,3 @@
-data "aws_caller_identity" "self" {}
 
 resource "aws_security_group" "bastion" {
   name        = "${var.environment}-bastion"
